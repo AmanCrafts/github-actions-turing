@@ -1,0 +1,14 @@
+name: Say Hello
+on:
+    push:
+        branches:
+        - main
+
+jobs:
+    run:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+        - name: Run start.js
+          run: node .github/workflows/start.js
